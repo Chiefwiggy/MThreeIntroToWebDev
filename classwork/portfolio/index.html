@@ -7,21 +7,51 @@
 <html lang="en">
     <head>
         <title>Collin Krueger Dev Portfolio</title>
+        <link href="styles/stylesheet.css" rel="stylesheet" type="text/css" />
+        <style>
+            caption {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 8px;
+            }
+
+            table, th, td {
+                border: 1px solid #0d1f2d;
+                border-collapse: collapse;
+                padding: 5px 10px;
+            }
+
+            table {
+                width: 90%;
+                margin: auto;
+            }
+
+            tr {
+                height: 30px;
+            }
+
+            th {
+                background-color: #546a7b;
+                color: #f2eded;
+            }
+
+             tr:nth-child(odd) {
+                 background-color: #e4c3ad;
+             }
+
+
+        </style>
     </head>
     <body>
         <header>
             <h1>Portfolio for Collin Krueger</h1>
-
-            <hr />
+        </header>
             <nav>
                 <p><a href="">Home</a></p>
                 <p><a href="projects.html">Projects</a></p>
                 <p><a href="contact.html">Contact Me</a></p>
                 <p><a href="testimonials.html">testimonials</a></p>
             </nav>
-            
-            <hr />
-        </header>
         <section>
             <article id="about">
                 <h2><em>About Me</em></h2>
@@ -100,7 +130,6 @@
             </article>
         </section>
         <footer>
-            <hr />
             <cite>All text pulled from https://collinkrueger.com</cite>
             <p>&copy; 2021 Collin Krueger. All rights reserved</p>
         </footer>
