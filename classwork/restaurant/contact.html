@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <header>
+            <h1>The Enchanted Apple</h1>
+            <hr />
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <hr />
+        </header>
+        <form action="submit.html" method="POST">
+            <label for="name">Name: 
+                <input type="text" name="name" id="name" />
+            </label><br />
+            <label for="email">Email: 
+                <input type="text" name="email" id="email" />
+            </label><br />
+            <label for="phone">Phone: 
+                <input type="text" name="phone" id="phone" />
+            </label><br />
+            <label for="reason">Reason for Inquiry:
+                <select id="reason" name="reason">
+                    <option value="catering" selected>Catering</option>
+                    <option value="privateParty">Private Party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+            </label><br />
+            <label for="additionalInfo"> Additional Information:
+                <textarea></textarea>
+            </label><br />
+            <label for="firstTimeStatus">Have you been to the restaurant
+                <label for="choice2"> No
+                    <input type="radio" id="choice2" name="questionnaire" value="no" checked>
+                </label>
+                <label for="choice1">Yes
+                    <input type="radio" id="choice1" name="questionnaire" value="yes">
+                </label>
+            </label><br />
+            <label for="days"> Best Days to Contact You:
+                <label for="monday">
+                    <input type="checkbox" name="days" value="monday" /> 
+                    M
+                </label>
+                <label for="tuesday">
+                    <input type="checkbox" name="days" value="tuesday" /> 
+                    Tu
+                </label>
+                <label for="wednesday">
+                    <input type="checkbox" name="days" value="wednesday" /> 
+                    W
+                </label>
+                <label for="thursday">
+                    <input type="checkbox" name="days" value="thursday" /> 
+                    Th
+                </label>
+                <label for="friday">
+                    <input type="checkbox" name="days" value="friday" /> 
+                    F
+                </label> 
+            </label><br/>
+            <input type="submit" name="submit" value="Submit"/>
+
+        </form>
+        <footer>
+            <hr />
+            <p><em>301 Rootwood Ave, Moorufell, Ponvonour, 5119-6</em></p>
+            <p><em>T: (7114) 82-9661 </em></p>
+        </footer>
+        
+        
+    </body>
+</html>
