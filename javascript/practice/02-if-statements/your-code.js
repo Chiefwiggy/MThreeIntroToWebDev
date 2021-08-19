@@ -17,10 +17,19 @@ var totalArchers = 0;         // number of kids who are actually doing archery i
 // - assign the value of kidsWhoWantToSwim to totalSwimmers
 // - assign the value of kidsWhoWantDoArchery to totalArchers
 
+if (kidsWhoWantToSwim % 2 == 0) {
+    totalSwimmers = kidsWhoWantToSwim;
+    totalArchers = kidsWhoWantDoArchery;
+}
+
 // If kidsWhoWantToSwim is odd, then at least one kid doesn't have a swimming buddy. 
 // To avoid leaving anyone out, we'll just do archery that afternoon.
 // - add the values of kidsWhoWantToSwim and kidsWhoWantDoArchery and assign the result to totalArchers
 // - totalSwimmers should remain at 0
+
+else {
+    totalArchers = kidsWhoWantDoArchery + kidsWhoWantToSwim;
+}
 
 // Hint: ------------------
 // You can use the modulo operator (%) to determine if a number is even. 
