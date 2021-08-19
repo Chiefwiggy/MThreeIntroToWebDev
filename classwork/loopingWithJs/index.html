@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Evens</title>
+    <link rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+        crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sample</h1>
+        <form method="POST" name="displayEvens" class="needs-validation" onsubmit="return validate();" novalidate>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="startNumber">Starting Number</label>
+                    <input type="number" autocomplete="off" class="form-control" name="startNumber" id="startingNumber" required>
+                    <div class="invalid-feedback">
+                        Starting Number must be a positive integer
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="endNumber">End Number</label>
+                    <input type="number" class="form-control" name="endNumber"  autocomplete="off" id="endNumber" required>
+                    <div class="invalid-feedback">
+                        End Number must be a positive integer greater than starting number.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="stepNumber">Step</label>
+                    <input type="number"  autocomplete="off" class="form-control" name="stepNumber" id="stepNumber" min="1" required>
+                    <div class="invalid-feedback">
+                        Step size must be a positive integer.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <button type="submit" id="submitButton" class="btn btn-primary">
+                        Display Evens </button>
+                </div>
+            </div>
+        </form>
+        <div id="results" style="display: none;">
+            <p>Here are the even numbers between <span id="startingNumberResult"></span> and <span id="endingNumberResult"></span> by <span id="stepResult"></span>s:</p>
+            <div id="calculatedResults" >
+
+            </div>
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+</html>
