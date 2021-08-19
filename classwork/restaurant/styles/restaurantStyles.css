@@ -1,0 +1,74 @@
+@font-face {
+    font-family: QuickKiss;
+    src: url(../assets/QuickKissPersonalUse-PxlZ.ttf);
+}
+
+
+
+body {
+    background-color: rgba(164, 0, 0, 0.12)
+}
+
+.jumbotron {
+    background-color:rgba(164, 0, 0, 0.5)
+}
+
+.content {
+    height: 100%;
+}
+
+footer {
+    background-color: rgba(164, 0, 0, 0.5);
+    padding: 16px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.6)
+}
+
+header {
+    margin-bottom: 8px !important;
+}
+
+
+h1 {
+    font-family: 'QuickKiss';
+    font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.854);
+}
+
+p {
+    font-family: 'Roboto';
+}
+
+nav {
+    border-top: thin #5b7d87 solid;
+    border-bottom: thin #5b7d87 solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: rgba(164, 0, 0, 0.6);
+    color: #fef9ff;
+}
+
+.btn:hover{
+    font-weight: bold;
+    color: #fef9ff;
+    background-color: rgba(164, 0, 0, 0.9)
+}
+
+.btn:active {
+    text-decoration: underline;
+}
+
+#reviewSection .btn:visited {
+    color: cornsilk;
+}
+
+
+

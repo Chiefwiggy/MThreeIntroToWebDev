@@ -2,78 +2,161 @@
 <html>
     <head>
         <title>Contact Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/restaurantStyles.css">
+
+        <style>
+            h2 {
+                text-align: center;
+            }
+
+            form {
+                width: 100%;
+                
+            }
+            .contactForm {
+                background-color: rgba(255, 255, 255, 0.4);
+                padding: 8px;
+                margin: 8px;
+                border: 1px dashed #a40000;
+            }
+            label {
+                color:rgba(0,0,0,0.7)
+            }
+
+        </style>
     </head>
     <body>
-        <header>
-            <h1>The Enchanted Apple</h1>
-            <hr />
+        <div class="container">
+            <header class="jumbotron">
+                <h1 class="text-center">The Enchanted Apple</h1>
+            </header>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="index.html" class="btn">Home</a>
+                <a href="menu.html" class="btn">Menu</a>
+                <a href="contact.html" class="btn" active>Contact Us</a>
             </nav>
-            <hr />
-        </header>
-        <form action="submit.html" method="POST">
-            <label for="name">Name: 
-                <input type="text" name="name" id="name" />
-            </label><br />
-            <label for="email">Email: 
-                <input type="text" name="email" id="email" />
-            </label><br />
-            <label for="phone">Phone: 
-                <input type="text" name="phone" id="phone" />
-            </label><br />
-            <label for="reason">Reason for Inquiry:
-                <select id="reason" name="reason">
-                    <option value="catering" selected>Catering</option>
-                    <option value="privateParty">Private Party</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select>
-            </label><br />
-            <label for="additionalInfo"> Additional Information:
-                <textarea></textarea>
-            </label><br />
-            <label for="firstTimeStatus">Have you been to the restaurant
-                <label for="choice2"> No
-                    <input type="radio" id="choice2" name="questionnaire" value="no" checked>
-                </label>
-                <label for="choice1">Yes
-                    <input type="radio" id="choice1" name="questionnaire" value="yes">
-                </label>
-            </label><br />
-            <label for="days"> Best Days to Contact You:
-                <label for="monday">
-                    <input type="checkbox" name="days" value="monday" /> 
-                    M
-                </label>
-                <label for="tuesday">
-                    <input type="checkbox" name="days" value="tuesday" /> 
-                    Tu
-                </label>
-                <label for="wednesday">
-                    <input type="checkbox" name="days" value="wednesday" /> 
-                    W
-                </label>
-                <label for="thursday">
-                    <input type="checkbox" name="days" value="thursday" /> 
-                    Th
-                </label>
-                <label for="friday">
-                    <input type="checkbox" name="days" value="friday" /> 
-                    F
-                </label> 
-            </label><br/>
-            <input type="submit" name="submit" value="Submit"/>
+            <section class="mb-4 contactForm">
+                <h2 class="my-4">Contact us!</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="submit.html" method="POST">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="md-form">
+                                        <input type="text" name="name" id="name" class="form-control"/>
+                                        <label for="name">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form">
+                                        
+                                        <input type="text" name="email" id="email" class="form-control" />
+                                        <label for="email"> Email </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form">
+                                        <input type="text" name="phone" id="phone" class="form-control" />
+                                        <label for="phone"> Phone </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form">
+                                        <select id="reason" name="reason" class="form-control">
+                                            <option value="catering" selected>Catering</option>
+                                            <option value="privateParty">Private Party</option>
+                                            <option value="feedback">Feedback</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="reason">Reason for Inquiry</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form">
+                                        <input type="text" name="referal" id="referal" class="form-control" />
+                                        <label for="referal"> Referal/Promo Code </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form">
+                                        <textarea class="form-control"></textarea>
+                                        <label for="additionalInfo">Your Message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="md-form">
+                                        <label for="firstTimeStatus">Have You Dined with Us Before?</label>
+                                        <label for="choice2"> No
+                                            <input type="radio" id="choice2" name="questionnaire" value="no" checked>
+                                        </label>
+                                        <label for="choice1">Yes
+                                            <input type="radio" id="choice1" name="questionnaire" value="yes">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form">
+                                        <label for="days"> Best Days to Contact You:
+                                            <label for="monday">
+                                                <input type="checkbox" name="days" value="monday" /> 
+                                                M
+                                            </label>
+                                            <label for="tuesday">
+                                                <input type="checkbox" name="days" value="tuesday" /> 
+                                                Tu
+                                            </label>
+                                            <label for="wednesday">
+                                                <input type="checkbox" name="days" value="wednesday" /> 
+                                                W
+                                            </label>
+                                            <label for="thursday">
+                                                <input type="checkbox" name="days" value="thursday" /> 
+                                                Th
+                                            </label>
+                                            <label for="friday">
+                                                <input type="checkbox" name="days" value="friday" /> 
+                                                F
+                                            </label> 
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" name="submit" value="Submit" class="btn form-control"/>
+                                </div>
+                            </div>
+                            
+                            
 
-        </form>
-        <footer>
-            <hr />
-            <p><em>301 Rootwood Ave, Moorufell, Ponvonour, 5119-6</em></p>
-            <p><em>T: (7114) 82-9661 </em></p>
-        </footer>
-        
+                            
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <p><em>301 Rootwood Ave, Moorufell, Ponvonour, 5119-6</em></p>
+                <p><em>T: (7114) 82-9661 </em></p>
+            </footer>
+                
+        </div>
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
     </body>
 </html>
