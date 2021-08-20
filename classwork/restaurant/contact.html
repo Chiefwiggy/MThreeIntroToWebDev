@@ -4,7 +4,7 @@
         <title>Contact Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-
+        
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -29,6 +29,10 @@
                 color:rgba(0,0,0,0.7)
             }
 
+            .form-group.is-invalid > .invalid-feedback {
+                display:block;
+            }
+
         </style>
     </head>
     <body>
@@ -45,32 +49,30 @@
                 <h2 class="my-4">Contact us!</h2>
                 <div class="row">
                     <div class="col-md-12">
-                        <form action="submit.html" method="POST">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="md-form">
-                                        <input type="text" name="name" id="name" class="form-control"/>
+                        <form onsubmit="return validate();" onreset="resetForm();" class="needs-validation" name="contactFillOut" novalidate>
+                            <div class="form-row">
+                                <div class="form-group md-form col-md-4">
+                                        <input type="text" name="name" id="name" class="form-control" required/>
                                         <label for="name">Name</label>
-                                    </div>
+                                        <div class="invalid-feedback "><small>Field required</small></div>
+                                </div>
+                                <div class="form-group md-form col-md-4">
+                                    <input type="email" name="email" id="email" class="form-control" required />
+                                    <label for="email"> Email </label>
+                                    <div class="invalid-feedback "><small>Not a valid email address</small></div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="md-form">
-                                        
-                                        <input type="text" name="email" id="email" class="form-control" />
-                                        <label for="email"> Email </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="md-form">
-                                        <input type="text" name="phone" id="phone" class="form-control" />
+                                    <div class="form-group md-form">
+                                        <input type="tel" name="phone" id="phone" class="form-control" autocomplete="off" required />
                                         <label for="phone"> Phone </label>
+                                        <div class="invalid-feedback "><small>Not a valid  phone number</small></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
                                     <div class="md-form">
-                                        <select id="reason" name="reason" class="form-control">
+                                        <select id="reason" name="reason" class="form-control" required>
                                             <option value="catering" selected>Catering</option>
                                             <option value="privateParty">Private Party</option>
                                             <option value="feedback">Feedback</option>
@@ -79,23 +81,23 @@
                                         <label for="reason">Reason for Inquiry</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class=" form-group col-md-6">
                                     <div class="md-form">
                                         <input type="text" name="referal" id="referal" class="form-control" />
                                         <label for="referal"> Referal/Promo Code </label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="form-row">
                                 <div class="col-md-12">
-                                    <div class="md-form">
-                                        <textarea class="form-control"></textarea>
+                                    <div class="form-group md-form">
+                                        <textarea class="form-control" placeholder="Your text goes here..."></textarea>
                                         <label for="additionalInfo">Your Message</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
                                     <div class="md-form">
                                         <label for="firstTimeStatus">Have You Dined with Us Before?</label>
                                         <label for="choice2"> No
@@ -106,7 +108,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="form-group col-md-6">
                                     <div class="md-form">
                                         <label for="days"> Best Days to Contact You:
                                             <label for="monday">
@@ -133,9 +135,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="submit" name="submit" value="Submit" class="btn form-control"/>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <button type="submit" name="submit" class="btn form-control">Submit</button>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <button type="reset" name="reset" class="btn-outline-danger form-control">Reset</button>
                                 </div>
                             </div>
                             
@@ -157,6 +162,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="functions/functions.js"></script>
         
     </body>
 </html>

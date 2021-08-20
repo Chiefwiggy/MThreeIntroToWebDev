@@ -8,6 +8,22 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/restaurantStyles.css">
+        <style>
+            .imageCarousel {
+                width: 960px;
+                height: 360px;
+            }
+            .carousel-caption h5, .carousel-caption p {
+                color: black;
+                padding: 4px;
+                margin-bottom: 2px;
+            }
+
+            .carousel-caption {
+                background-color: rgba(255,255,255,0.65);
+                padding: 2px
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -19,7 +35,34 @@
                 <a href="menu.html" class="btn">Menu</a>
                 <a href="contact.html" class="btn">Contact Us</a>
             </nav>
-            <img src="assets/applesroyaltyfree.jpg" width="600px" height="225px" alt="generic photo" style="display: block; margin: 12px auto;" />
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/Buildings-city-houston-skyline-1870617.jpg" class="imageCarousel" alt="generic photo" style="display: block; margin: 12px auto;" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Also Check out The Enchanted Eclair</h5>
+                            <p>Located in Downtown Ustalok along the River</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/applesroyaltyfree.jpg" class="imageCarousel" alt="generic photo" style="display: block; margin: 12px auto;" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Try Our Seasonal Menu</h5>
+                            <p>Baked Apple Pies made with locally grown apples</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <img src="assets/vino.jpg" class="imageCarousel" alt="generic photo" style="display: block; margin: 12px auto;" />
+                    
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Try our new Apple Peach Wine</h5>
+                            <p>Supplies Limited. Offer ends on the 21st</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
             <div id="description">
                 <p>The Enchanted is the finest restaurant/hotel in all of Moorufell. Right along the boulevard of the Academy grounds, you will find there's much to do along the Shelves. With luxury rooms to accomodate even the pickiest of clientelle, the Enchanted Apple takes pride in being a beacon for travellers who value comfort and luxury above all</p>
             </div>
@@ -27,6 +70,7 @@
                 <h3>Read a recent review</h3>
                 <a class="btn" href="https://guide.michelin.com/en/illinois/chicago/restaurant/acadia" target="_blank">Michelin Review</a>
             </div>
+            <br />
             <footer >
                 <p><em>301 Rootwood Ave, Moorufell, Ponvonour, 5119-6</em></p>
                 <p><em>T: (7114) 82-9661 </em></p>
@@ -36,6 +80,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
         
     </body>
 </html>
